@@ -1,0 +1,63 @@
+@import 'tailwindcss';
+
+@theme {
+    /* fonts */
+    --font-sans: 'Shabnam', sans-serif;
+
+    /* colors */
+    --color-bg-color: hsl(210, 15%, 5%);
+    --color-layout-color: hsl(0, 0%, 9%);
+    --color-box-color: hsl(0, 0%, 11%);
+    --color-line-color: hsl(0, 0%, 16%);
+    --color-text-color: hsl(0, 0%, 95%);
+    --color-secondary-text-color: hsl(0, 0%, 57%);
+    --color-success-color: hsl(163, 62%, 47%);
+    --color-ok-color: hsl(212, 86%, 55%);
+    --color-warning-color: hsl(36, 39%, 28%);
+    --color-warning-light-color: hsl(37, 49%, 54%);
+    --color-failed-color: hsl(8, 68%, 45%);
+}
+
+
+@layer components {
+    /* navbar */
+    .navbar {
+        @apply bg-layout-color col-start-2 rounded-2xl flex justify-between items-center p-3;
+    }
+    .navbar-right {
+        @apply w-[300px] h-full flex gap-3
+         items-center;
+    }
+    .navbar-left {
+        @apply w-full h-full flex items-center justify-end;
+    }
+    .bx-menu {
+        @apply text-text-color text-4xl cursor-pointer;
+    }
+
+    .bxr {
+        @apply text-text-color text-2xl;
+    }
+    .navbar-left{
+        @apply  flex gap-3 ;
+    }
+    .navbar-left-right{
+        @apply  gap-2 border-2 border-line-color px-2 flex items-center h-full bg-box-color rounded-lg ;
+    }
+    .navbar-search-input{
+        @apply  text-text-color text-center outline-0 h-full ;
+    }
+    .navbar-search-label{
+        @apply  flex items-center ;
+    }
+    .navbar-left-left{
+        @apply  flex items-center gap-3 ;
+    }
+    .navbar{
+        @apply  flex ;
+    }
+    .navbar{
+        @apply  flex ;
+    }
+
+}

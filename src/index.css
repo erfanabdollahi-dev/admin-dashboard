@@ -1,0 +1,77 @@
+@import 'tailwindcss';
+@font-face {
+    font-family: Shabnam;
+    src: url('./assets/font/Shabnam.woff2') format('woff2'),
+        url('./assets/font/Shabnam.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Shabnam;
+    src: url('./assets/font/Shabnam-Bold.woff2') format('woff2'),
+        url('./assets/font/Shabnam-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Shabnam;
+    src: url('./assets/font/Shabnam-Thin.woff2') format('woff2'),
+        url('./assets/font/Shabnam-Thin.woff') format('woff');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Shabnam;
+    src: url('./assets/font/Shabnam-Light.woff2') format('woff2'),
+        url('./assets/font/Shabnam-Light.woff') format('woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Shabnam;
+    src: url('./assets/font/Shabnam-Medium.woff2') format('woff2'),
+        url('./assets/font/Shabnam-Medium.woff') format('woff');
+    font-weight: 500;
+}
+@theme {
+    /* fonts */
+    --font-sans: 'Shabnam', sans-serif;
+
+    /* colors */
+    --color-bg-color: hsl(210, 15%, 5%);
+    --color-layout-color: hsl(0, 0%, 9%);
+    --color-box-color: hsl(0, 0%, 11%);
+    --color-line-color: hsl(0, 0%, 16%);
+    --color-text-color: hsl(0, 0%, 95%);
+    --color-secondary-text-color: hsl(0, 0%, 57%);
+    --color-success-color: hsl(163, 62%, 47%);
+    --color-ok-color: hsl(212, 86%, 55%);
+    --color-warning-color: hsl(36, 39%, 28%);
+    --color-warning-light-color: hsl(37, 49%, 54%);
+    --color-failed-color: hsl(8, 68%, 45%);
+}
+@layer base {
+    * {
+        @apply box-border;
+    }
+    p{
+        @apply text-secondary-text-color
+    }
+    h1{
+        @apply text-text-color
+    }
+}
+
+@layer components {
+    #root {
+        @apply box-border p-4  bg-bg-color grid grid-cols-[auto_1fr] grid-rows-[65px_1fr] gap-3  min-h-screen;
+    }
+    .content {
+        @apply bg-layout-color rounded-2xl  w-full;
+    }
+    .dashed{
+        @apply w-full my-4 h-[1px] bg-[repeating-linear-gradient(to_right,#1c1c1c_0_7px,transparent_7px_13px)];
+    }
+
+ 
+}
