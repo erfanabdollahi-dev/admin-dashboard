@@ -105,6 +105,9 @@
     i {
         color: var(--color-ok-color);
     }
+    h2 {
+        color: var(--color-ok-color);
+    }
 }
 
 /* width of scrollbar */

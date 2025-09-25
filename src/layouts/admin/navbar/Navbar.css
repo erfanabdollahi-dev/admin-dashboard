@@ -42,7 +42,7 @@
         @apply  flex gap-3 ;
     }
     .navbar-left-right{
-        @apply  gap-2 border-2 border-line-color px-2 flex items-center h-full bg-box-color rounded-lg ;
+        @apply  gap-2 border-2 border-line-color px-2 flex items-center h-full duration-300 bg-box-color rounded-lg  focus-within:border-ok-color  ;
     }
     .navbar-search-input{
         @apply  text-text-color text-center outline-0 h-full ;
