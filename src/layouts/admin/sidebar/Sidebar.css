@@ -20,7 +20,7 @@
 
 @layer components {
   .sidebar {
-    @apply duration-300 right-0  overflow-scroll  absolute select-none h-screen box-border min-w-0 border-1 border-l-line-color   top-0 lg:sticky bg-layout-color  p-3 row-start-1 row-end-3 w-[300px];
+    @apply duration-300 right-0  overflow-scroll  absolute select-none h-screen box-border min-w-0 border-1 border-l-line-color   top-0 lg:sticky bg-layout-color  p-3 pl-[17px] row-start-1 row-end-3 w-[300px];
   }
 
   .sidebar-inner {
@@ -65,16 +65,16 @@
     @apply duration-300 group-hover:text-text-color text-secondary-text-color;
   }
   .sidebar-sub-parent {
-    @apply flex items-center w-full  duration-300   gap-2 border-2 border-layout-color rounded-lg flex-col;
+    @apply flex items-center w-full  duration-300    border-2 border-layout-color rounded-lg flex-col;
   }
   .sidebar-submenu {
-    @apply flex flex-col overflow-hidden max-h-0 duration-300 ease-in-out transition-all w-[90%]  border-r-2 pr-1 border-line-color gap-1;
+    @apply flex flex-col overflow-hidden max-h-0  duration-300 ease-in-out transition-all w-[90%]  border-r-2 pr-1 border-line-color gap-1;
   }
   .sidebar-submenu-item-child {
     @apply flex items-center w-full duration-300 p-2  gap-4 border-2 border-layout-color rounded-lg  justify-between;
   }
   .submenu-show {
-    @apply max-h-[400px]; /* large enough to contain all submenu items */
+    @apply max-h-[400px] mt-2; /* large enough to contain all submenu items */
   }
   .sidebar-submenu-arrow {
     @apply text-lg duration-300 group-hover:text-text-color text-secondary-text-color;
@@ -90,6 +90,7 @@
 
 .sidebar{
     direction: ltr;
+   
     *{
         direction: rtl;
     }
@@ -131,12 +132,21 @@
 }
 
 /* width of scrollbar */
+.sidebar::-webkit-scrollbar {
+  width:5px;
+  height: 0;
 
+}
+.sidebar-closed::-webkit-scrollbar {
+  width:0px;
+  height: 0;
+
+}
 
 /* track */
 .sidebar::-webkit-scrollbar-track {
   background: transparent;
-  
+    
    /* or use a Tailwind color like theme('colors.gray.200') */
 }
 
@@ -163,6 +173,10 @@
 
 @media (min-width: 1000px) {
   .sidebar-closed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     overflow-x: hidden;
     transition: 300ms;
     width: 70px !important;
     position: sticky;
