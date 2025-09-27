@@ -49,6 +49,9 @@
     }
     .navbar-search-label{
         @apply  flex items-center ;
+        i{
+            @apply text-secondary-text-color duration-300
+        }
     }
     .navbar-left-left{
         @apply  flex items-center gap-3 ;
@@ -60,4 +63,10 @@
         @apply  flex ;
     }
 
+}
+
+
+.navbar-left-right:focus-within label i{
+    color: white;
+    transition: 300ms;
 }
