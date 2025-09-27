@@ -14,29 +14,41 @@ import { SidebarContext } from "../contexts/SidebarContext";
 
 const Index = () => {
   const { OpenSidebar, sidebarOpen } = useContext(SidebarContext);
-
+  const sidebarRef = useRef(null);
+  const handleClickOutside = (event) => {
+    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+      OpenSidebar(false);
+    }
+  };
   useEffect(() => {
-    console.log(sidebarOpen);
+    if (sidebarOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, [sidebarOpen]);
+
   return (
     <aside
-      className={`sidebar pr-0  ${!sidebarOpen ? "sidebar-closed" : null}`}
+      ref={sidebarRef}
+      className={`sidebar   ${!sidebarOpen ? "sidebar-closed" : null}`}
       onClick={() => {
         if (!sidebarOpen) {
           OpenSidebar(true);
         }
-
       }}
     >
-      <div className={`sidebar-inner`} dir="rtl">
-        <div className="sidebar-inner-2 pr-2" dir="rtl">
+
           {/* info */}
           <Info />
 
           {/* items */}
           <Items />
-        </div>
-      </div>
+
     </aside>
   );
 };

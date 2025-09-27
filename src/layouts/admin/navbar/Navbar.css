@@ -22,14 +22,14 @@
 @layer components {
     /* navbar */
     .navbar {
-        @apply bg-layout-color col-start-2 rounded-2xl flex justify-between items-center p-3;
+        @apply bg-layout-color lg:col-start-2 col-start-1 row-start-1 border-1 border-line-color border-r-0  border-t-0 border-l-0 flex justify-between gap-4 items-center p-3;
     }
     .navbar-right {
-        @apply w-[300px] h-full flex gap-3
+        @apply w-fit h-full flex gap-3
          items-center;
     }
     .navbar-left {
-        @apply w-full h-full flex items-center justify-end;
+        @apply w-fit h-full flex items-center justify-end;
     }
     .bx-menu {
         @apply text-text-color text-4xl cursor-pointer;
@@ -42,10 +42,10 @@
         @apply  flex gap-3 ;
     }
     .navbar-left-right{
-        @apply  gap-2 border-2 border-line-color px-2 flex items-center h-full duration-300 bg-box-color rounded-lg  focus-within:border-ok-color  ;
+        @apply  gap-2 border-2 w-sm overflow-hidden border-line-color px-2 flex items-center justify-between h-full duration-300 bg-box-color rounded-lg  focus-within:border-ok-color  ;
     }
     .navbar-search-input{
-        @apply  text-text-color text-center outline-0 h-full ;
+        @apply  text-text-color text-center outline-0 w-full text-sm sm:text-lg h-full ;
     }
     .navbar-search-label{
         @apply  flex items-center ;
@@ -54,7 +54,7 @@
         }
     }
     .navbar-left-left{
-        @apply  flex items-center gap-3 ;
+        @apply  flex items-center  gap-3 ;
     }
     .navbar{
         @apply  flex ;
