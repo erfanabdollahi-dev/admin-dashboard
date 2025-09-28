@@ -1,5 +1,5 @@
-import React from 'react';
-import profileimg from '../../../assets/doge.png';
+import React from "react";
+import profileimg from "../../../assets/doge.png";
 
 const Info = () => {
     return (

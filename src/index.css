@@ -1,41 +1,41 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @font-face {
     font-family: Shabnam;
-    src: url('./assets/font/Shabnam.woff2') format('woff2'),
-        url('./assets/font/Shabnam.woff') format('woff');
+    src: url("./assets/font/Shabnam.woff2") format("woff2"),
+        url("./assets/font/Shabnam.woff") format("woff");
     font-weight: normal;
 }
 
 @font-face {
     font-family: Shabnam;
-    src: url('./assets/font/Shabnam-Bold.woff2') format('woff2'),
-        url('./assets/font/Shabnam-Bold.woff') format('woff');
+    src: url("./assets/font/Shabnam-Bold.woff2") format("woff2"),
+        url("./assets/font/Shabnam-Bold.woff") format("woff");
     font-weight: bold;
 }
 
 @font-face {
     font-family: Shabnam;
-    src: url('./assets/font/Shabnam-Thin.woff2') format('woff2'),
-        url('./assets/font/Shabnam-Thin.woff') format('woff');
+    src: url("./assets/font/Shabnam-Thin.woff2") format("woff2"),
+        url("./assets/font/Shabnam-Thin.woff") format("woff");
     font-weight: 100;
 }
 
 @font-face {
     font-family: Shabnam;
-    src: url('./assets/font/Shabnam-Light.woff2') format('woff2'),
-        url('./assets/font/Shabnam-Light.woff') format('woff');
+    src: url("./assets/font/Shabnam-Light.woff2") format("woff2"),
+        url("./assets/font/Shabnam-Light.woff") format("woff");
     font-weight: 300;
 }
 
 @font-face {
     font-family: Shabnam;
-    src: url('./assets/font/Shabnam-Medium.woff2') format('woff2'),
-        url('./assets/font/Shabnam-Medium.woff') format('woff');
+    src: url("./assets/font/Shabnam-Medium.woff2") format("woff2"),
+        url("./assets/font/Shabnam-Medium.woff") format("woff");
     font-weight: 500;
 }
 @theme {
     /* fonts */
-    --font-sans: 'Shabnam', sans-serif;
+    --font-sans: "Shabnam", sans-serif;
 
     /* colors */
     --color-bg-color: hsl(210, 15%, 5%);
@@ -54,11 +54,11 @@
     * {
         @apply box-border;
     }
-    p{
-        @apply text-secondary-text-color
+    p {
+        @apply text-secondary-text-color;
     }
-    h1{
-        @apply text-text-color
+    h1 {
+        @apply text-text-color;
     }
 }
 
@@ -67,11 +67,9 @@
         @apply box-border relative  bg-bg-color grid grid-cols-1 lg:grid-cols-[auto_1fr] grid-rows-[65px_1fr] max-w-full   min-h-screen;
     }
     .content {
-        @apply bg-layout-color  ;
+        @apply bg-layout-color;
     }
-    .dashed{
+    .dashed {
         @apply w-full my-4 h-[1px] bg-[repeating-linear-gradient(to_right,#1c1c1c_0_7px,transparent_7px_13px)];
     }
-
- 
 }

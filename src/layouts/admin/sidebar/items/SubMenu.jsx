@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React, { Children } from "react";
 
 const SubMenu = ({ openMenu, toggleMenu, Active, toggleActive, item }) => {
     return (
@@ -6,7 +6,7 @@ const SubMenu = ({ openMenu, toggleMenu, Active, toggleActive, item }) => {
             <div className="sidebar-sub-parent">
                 <div
                     className={`sidebar-item-child justify-between group ${
-                        openMenu == item.name ? 'sidebar-submenu-active' : null
+                        openMenu == item.name ? "sidebar-submenu-active" : null
                     }`}
                     onClick={() => toggleMenu(item.name)}
                 >
@@ -17,13 +17,13 @@ const SubMenu = ({ openMenu, toggleMenu, Active, toggleActive, item }) => {
                     </div>
                     <i
                         className={`bx bxs-chevron-up sidebar-submenu-arrow ${
-                            openMenu == item.name ? 'arrow-rotate' : null
+                            openMenu == item.name ? "arrow-rotate" : null
                         }`}
                     ></i>
                 </div>
                 <ul
                     className={`sidebar-submenu  ${
-                        openMenu == item.name ? 'submenu-show' : null
+                        openMenu == item.name ? "submenu-show" : null
                     }`}
                 >
                     {item.children.map((child, i) => (
@@ -31,7 +31,7 @@ const SubMenu = ({ openMenu, toggleMenu, Active, toggleActive, item }) => {
                             key={child.title}
                             className={`sidebar-item-child  group ${
                                 Active == child.title
-                                    ? 'sidebar-item-active'
+                                    ? "sidebar-item-active"
                                     : null
                             }`}
                             onClick={() => toggleActive(child.title)}

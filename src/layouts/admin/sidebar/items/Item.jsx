@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Item = ({ Active, toggleActive, item }) => {
     return (
@@ -7,9 +7,9 @@ const Item = ({ Active, toggleActive, item }) => {
                 <ul className="sidebar-item">
                     <li
                         className={`sidebar-item-child  group ${
-                            Active == item.title ? 'sidebar-item-active' : null
+                            Active == item.title ? "sidebar-item-active" : null
                         }`}
-                        onClick={()=>toggleActive(item.title)}
+                        onClick={() => toggleActive(item.title)}
                     >
                         <i className={`${item.icon} sidebar-item-icon `}></i>
                         <h2 className="sidebar-item-title ">{item.title}</h2>

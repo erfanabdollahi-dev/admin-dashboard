@@ -1,8 +1,8 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
     /* fonts */
-    --font-sans: 'Shabnam', sans-serif;
+    --font-sans: "Shabnam", sans-serif;
 
     /* colors */
     --color-bg-color: hsl(210, 15%, 5%);
@@ -17,7 +17,6 @@
     --color-warning-light-color: hsl(37, 49%, 54%);
     --color-failed-color: hsl(8, 68%, 45%);
 }
-
 
 @layer components {
     /* navbar */
@@ -38,35 +37,33 @@
     .bxr {
         @apply text-text-color text-2xl;
     }
-    .navbar-left{
-        @apply  flex gap-3 ;
+    .navbar-left {
+        @apply flex gap-3;
     }
-    .navbar-left-right{
-        @apply  gap-2 border-2 w-sm overflow-hidden border-line-color px-2 flex items-center justify-between h-full duration-300 bg-box-color rounded-lg  focus-within:border-ok-color  ;
+    .navbar-left-right {
+        @apply gap-2 border-2 w-sm overflow-hidden border-line-color px-2 flex items-center justify-between h-full duration-300 bg-box-color rounded-lg  focus-within:border-ok-color;
     }
-    .navbar-search-input{
-        @apply  text-text-color text-center outline-0 w-full text-sm sm:text-lg h-full ;
+    .navbar-search-input {
+        @apply text-text-color text-center outline-0 w-full text-sm sm:text-lg h-full;
     }
-    .navbar-search-label{
-        @apply  flex items-center ;
-        i{
-            @apply text-secondary-text-color duration-300
+    .navbar-search-label {
+        @apply flex items-center;
+        i {
+            @apply text-secondary-text-color duration-300;
         }
     }
-    .navbar-left-left{
-        @apply  flex items-center  gap-3 ;
+    .navbar-left-left {
+        @apply flex items-center  gap-3;
     }
-    .navbar{
-        @apply  flex ;
+    .navbar {
+        @apply flex;
     }
-    .navbar{
-        @apply  flex ;
+    .navbar {
+        @apply flex;
     }
-
 }
 
-
-.navbar-left-right:focus-within label i{
+.navbar-left-right:focus-within label i {
     color: white;
     transition: 300ms;
 }

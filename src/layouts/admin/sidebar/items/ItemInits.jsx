@@ -1,46 +1,46 @@
 export const connections = {
-    title: 'ارتباطات',
-    name: 'connections',
-    icon: 'bxr bxs-community',
+    title: "ارتباطات",
+    name: "connections",
+    icon: "bx bxs-share-alt",
     children: [
-        { title: 'پیام ها', icon: 'bx bx-message-alt-detail' },
-        { title: 'شبکه ها', icon: 'bx-alert-circle' },
+        { title: "سوال ها", icon: "bx-alert-circle" },
+        { title: "نظرات", icon: "bx bx-message-alt-detail" },
     ],
 };
 export const shop = {
-    title: 'فروشگاه',
-    name: 'shop',
-    icon: 'bx bxs-shopping-bag-alt',
+    title: "فروشگاه",
+    name: "shop",
+    icon: "bx bxs-shopping-bag-alt",
     children: [
-        { title: 'مدیریت گروه محصول', icon: 'bxr bx-tag' },
-        { title: 'مدیریت محصول', icon: 'bx bx-box' },
-        { title: 'مدیریت برند ها', icon: 'bxr bx-crown' },
-        { title: 'مدیریت گارانتی ها', icon: 'bxr bx-badge-check' },
-        { title: 'مدیریت رنگ ها', icon: 'bx bx-palette' },
-        { title: 'مدیریت تخفیف ها', icon: 'bx bx-discount' },
+        { title: "مدیریت گروه محصول", icon: "bxr bx-tag" },
+        { title: "مدیریت محصول", icon: "bx bx-box" },
+        { title: "مدیریت برند ها", icon: "bxr bx-crown" },
+        { title: "مدیریت گارانتی ها", icon: "bxr bx-badge-check" },
+        { title: "مدیریت رنگ ها", icon: "bx bx-palette" },
+        { title: "مدیریت تخفیف ها", icon: "bx bx-discount" },
     ],
 };
 export const cart = {
-    title: 'سفارشات و سبد',
-    name: 'cart',
-    icon: 'bx bxs-purchase-tag',
+    title: "سفارشات و سبد",
+    name: "cart",
+    icon: "bx bxs-purchase-tag",
     children: [
-        { title: 'مدیریت سبد ها', icon: 'bxr  bx-basket' },
-        { title: 'مدیریت سفارشات', icon: 'bx bx-box' },
-        { title: 'مدیریت نحوه ارسال', icon: 'bxr bx-truck' },
+        { title: "مدیریت سبد ها", icon: "bxr  bx-basket" },
+        { title: "مدیریت سفارشات", icon: "bx bx-box" },
+        { title: "مدیریت نحوه ارسال", icon: "bxr bx-truck" },
     ],
 };
 export const community = {
-    title: 'کاربران و همکاران',
-    name: 'community',
-    icon: 'bxr bxs-community',
+    title: "کاربران و همکاران",
+    name: "community",
+    icon: "bxr bxs-community",
     children: [
-        { title: 'مشاهده کاربران', icon: 'bxr bx-user-search' },
-        { title: 'نقش ها', icon: 'bxr bx-scan-face' },
-        { title: 'مجوز ها', icon: 'bxr bx-shield' },
+        { title: "مشاهده کاربران", icon: "bxr bx-user-search" },
+        { title: "نقش ها", icon: "bxr bx-scan-face" },
+        { title: "مجوز ها", icon: "bxr bx-shield" },
     ],
 };
 export const dashboard = {
-    title: 'داشبورد',
-    icon: 'bx bxs-dashboard',
+    title: "داشبورد",
+    icon: "bx bxs-dashboard",
 };
