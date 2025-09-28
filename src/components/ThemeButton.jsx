@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 const ThemeButton = () => {
-    const [dark, setDark] = useState(false);
+    const [dark, setDark] = useState(true);
     const handleTheme = () => {
         setDark(!dark);
+        document.body.classList.toggle('dark')
     };
     return (
         <>
@@ -13,7 +14,7 @@ const ThemeButton = () => {
                 id="theme-toggle"
                 onClick={handleTheme}
             />
-            <div className="theme-display duration-150 w-full h-full flex items-center">
+            <div className="theme-display duration-150 w-full h-full flex items-center overflow-hidden">
                 <label
                     htmlFor="theme-toggle"
                     className={`rounded-full relative duration-150 h-[24px] w-[46px] ${
