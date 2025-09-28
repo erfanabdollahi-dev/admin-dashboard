@@ -21,7 +21,8 @@ const Index = () => {
         }
     };
     useEffect(() => {
-        if (sidebarOpen) {
+        const isLargeScreen = window.innerWidth <= 1024
+        if (sidebarOpen && isLargeScreen) {
             document.addEventListener("mousedown", handleClickOutside);
         } else {
             document.removeEventListener("mousedown", handleClickOutside);

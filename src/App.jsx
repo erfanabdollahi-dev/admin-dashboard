@@ -7,7 +7,7 @@ function App() {
         <>
             <Index />
 
-            <main className="content">content</main>
+            
         </>
     );
 }

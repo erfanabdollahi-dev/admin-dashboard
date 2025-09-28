@@ -33,23 +33,56 @@
         url("./assets/font/Shabnam-Medium.woff") format("woff");
     font-weight: 500;
 }
+
+/* digits */
+@font-face {
+    font-family: ShabnamFD;
+    src: url("./assets/font/Farsi-Digits/Shabnam-Bold-FD.woff2") format("woff2"),
+        url("./assets/font/Farsi-Digits/Shabnam-Bold-FD.woff") format("woff");
+    font-weight: 700;
+}
+@font-face {
+    font-family: ShabnamFD;
+    src: url("./assets/font/Farsi-Digits/Shabnam-Medium-FD.woff2") format("woff2"),
+        url("./assets/font/Farsi-Digits/Shabnam-Medium-FD.woff") format("woff");
+    font-weight: 500;
+}
+@font-face {
+    font-family: ShabnamFD;
+    src: url("./assets/font/Farsi-Digits/Shabnam-Light-FD.woff2") format("woff2"),
+        url("./assets/font/Farsi-Digits/Shabnam-Light-FD.woff") format("woff");
+    font-weight: 300;
+}
+@font-face {
+    font-family: ShabnamFD;
+    src: url("./assets/font/Farsi-Digits/Shabnam-Thin-FD.woff2") format("woff2"),
+        url("./assets/font/Farsi-Digits/Shabnam-Thin-FD.woff") format("woff");
+    font-weight: 100;
+}
+
+
+
 @theme {
     /* fonts */
     --font-sans: "Shabnam", sans-serif;
+    --font-ShabnamFD: "ShabnamFD", sans-serif;
 
     /* colors */
     --color-bg-color: hsl(210, 15%, 5%);
-    --color-layout-color: hsl(0, 0%, 9%);
-    --color-box-color: hsl(0, 0%, 11%);
-    --color-line-color: hsl(0, 0%, 16%);
-    --color-text-color: hsl(0, 0%, 95%);
-    --color-secondary-text-color: hsl(0, 0%, 57%);
+    --color-layout-color: hsl(0, 0%, 4%);
+    --color-box-color: hsl(0, 0%, 9%);
+    --color-box-highlights-color: hsl(0, 0%, 13%);
+    --color-line-color: hsl(180, 1%, 17%);
+    --color-text-color: hsl(0, 0%, 98%);
+    --color-secondary-text-color: hsl(0, 0%, 63%);
+
     --color-success-color: hsl(163, 62%, 47%);
     --color-ok-color: hsl(212, 86%, 55%);
     --color-warning-color: hsl(36, 39%, 28%);
     --color-warning-light-color: hsl(37, 49%, 54%);
     --color-failed-color: hsl(8, 68%, 45%);
 }
+
 @layer base {
     * {
         @apply box-border;
@@ -66,10 +99,8 @@
     #root {
         @apply box-border relative  bg-bg-color grid grid-cols-1 lg:grid-cols-[auto_1fr] grid-rows-[65px_1fr] max-w-full   min-h-screen;
     }
-    .content {
-        @apply bg-layout-color;
-    }
+
     .dashed {
-        @apply w-full my-4 h-[1px] bg-[repeating-linear-gradient(to_right,#1c1c1c_0_7px,transparent_7px_13px)];
+        @apply w-full my-4 h-[1px]  bg-[repeating-linear-gradient(to_right,#1c1c1c_0_7px,transparent_7px_13px)];
     }
 }

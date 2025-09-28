@@ -5,11 +5,14 @@ import {
     SidebarContext,
     SidebarContextContainer,
 } from "./contexts/SidebarContext";
+import Dashboard from "../../pages/dashboard/Dashboard";
 const Index = () => {
     return (
         <SidebarContextContainer>
             <Navbar />
             <Sidebar />
+
+            <Dashboard />
         </SidebarContextContainer>
     );
 };

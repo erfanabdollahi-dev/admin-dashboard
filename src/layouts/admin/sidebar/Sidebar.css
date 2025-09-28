@@ -5,12 +5,14 @@
     --font-sans: "Shabnam", sans-serif;
 
     /* colors */
-    --color-bg-color: hsl(210, 15%, 5%);
-    --color-layout-color: hsl(0, 0%, 9%);
-    --color-box-color: hsl(0, 0%, 11%);
-    --color-line-color: hsl(0, 0%, 16%);
-    --color-text-color: hsl(0, 0%, 95%);
-    --color-secondary-text-color: hsl(0, 0%, 57%);
+    --color-bg-color:  hsl(0, 0%, 4%);
+    --color-layout-color: hsl(0, 0%, 4%);
+    --color-box-color: hsl(0, 0%, 9%);
+    --color-box-highlights-color: hsl(0, 0%, 13%);
+    --color-line-color: hsl(180, 1%, 17%);
+    --color-text-color: hsl(0, 0%, 98%);
+    --color-secondary-text-color: hsl(0, 0%, 63%);
+
     --color-success-color: hsl(163, 62%, 47%);
     --color-ok-color: hsl(212, 86%, 55%);
     --color-warning-color: hsl(36, 39%, 28%);
@@ -20,7 +22,7 @@
 
 @layer components {
     .sidebar {
-        @apply duration-300 right-0  overflow-scroll  absolute select-none h-screen box-border min-w-0 border-1 border-l-line-color   top-0 lg:sticky bg-layout-color  p-3 pl-[17px] row-start-1 row-end-3 w-[300px];
+        @apply duration-300 right-0  overflow-scroll z-50  absolute select-none h-screen box-border min-w-0 border-1 border-l-line-color   top-0 lg:sticky bg-layout-color  p-3 pl-[17px] row-start-1 row-end-3 w-[300px];
     }
 
     .sidebar-inner {
@@ -34,7 +36,7 @@
     }
     /* profile */
     .item-info {
-        @apply gap-3 flex  w-full  bg-bg-color items-center  justify-between  rounded-lg p-2;
+        @apply gap-3 flex border-2 border-line-color w-full  bg-bg-color items-center  justify-between  rounded-lg p-2;
     }
     .sidebar-profile {
         @apply min-w-[50px]  max-w-[50px] overflow-hidden rounded-sm h-[50px];
@@ -166,7 +168,7 @@
     transform: translate(100%);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
     .sidebar-closed {
         display: flex;
         flex-direction: column;
@@ -188,6 +190,10 @@
         .item-info {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4px;
+           
         }
         .sidebar-profile {
             display: flex;
