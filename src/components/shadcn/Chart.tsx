@@ -44,7 +44,7 @@ const chartConfig = {
 
 export default function ChartAreaDefault() {
     return (
-        <Card className="chart h-full w-full font-ShabnamFD rounded-lg border-[1px] border-line-color">
+        <Card className="chart h-full w-full font-ShabnamFD bg-[var(--box-color)] rounded-lg border-[1px] border-line-color">
             <CardHeader>
                 <CardTitle>فروش</CardTitle>
                 <CardDescription>نمودار فروش یکسال گذشته</CardDescription>

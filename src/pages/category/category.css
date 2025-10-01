@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import "../../index.css";
+
+@layer components {
+    .category {
+        @apply p-3 grid grid-cols-1 grid-rows-[1fr_auto_60px]  min-h-[calc(100vh-65px)];
+    }
+    .category-header {
+        @apply w-full h-full flex flex-col items-center;
+    }
+    .catetory-title {
+        @apply text-[var(--text-color)] text-2xl py-7;
+    }
+    .category-header-bottom {
+        @apply flex items-center box-border sm:justify-between gap-5  justify-center sm:gap-10   overflow-hidden w-full h-[45px];
+    }
+    .category-search {
+        @apply h-full box-border justify-center flex  gap-2 sm:w-[50%]   items-center px-2 border-2 duration-300  border-line-color rounded-lg;
+        i {
+            @apply text-3xl duration-300  text-secondary-text-color  flex text-center  box-border;
+        }
+        input {
+            @apply h-full w-[90%]  outline-0 text-[var(--text-color)]  text-center gap-2;
+        }
+    }
+    .category-add{
+        @apply text-[50px] justify-self-end  text-left duration-300 active:text-success-color text-[var(--text-color)] hover:text-success-color cursor-pointer
+    }
+    .category-search:focus-within{
+        @apply border-ok-color;
+        i{
+            @apply text-ok-color
+        }
+    }
+}
+
+
+.category{
+    *{
+        user-select: none;
+    }
+}

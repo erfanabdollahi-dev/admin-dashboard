@@ -6,13 +6,15 @@ import {
     SidebarContextContainer,
 } from "./contexts/SidebarContext";
 import Dashboard from "../../pages/dashboard/Dashboard";
+import Category from "@/pages/category/Category";
 const Index = () => {
     return (
         <SidebarContextContainer>
             <Navbar />
             <Sidebar />
 
-            <Dashboard />
+            {/* <Dashboard /> */}
+            <Category/>
         </SidebarContextContainer>
     );
 };

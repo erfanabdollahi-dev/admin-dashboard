@@ -1,53 +1,35 @@
 @import "tailwindcss";
+@import '../../../index.css';
 
-@theme {
-    /* fonts */
-    --font-sans: "Shabnam", sans-serif;
-
-    /* colors */
-    --color-bg-color: hsl(210, 15%, 5%);
-    --color-layout-color: hsl(0, 0%, 4%);
-    --color-box-color: hsl(0, 0%, 9%);
-    --color-box-highlights-color: hsl(0, 0%, 13%);
-    --color-line-color: hsl(180, 1%, 17%);
-    --color-text-color: hsl(0, 0%, 98%);
-    --color-secondary-text-color: hsl(0, 0%, 63%);
-    
-    --color-success-color: hsl(163, 62%, 47%);
-    --color-ok-color: hsl(212, 86%, 55%);
-    --color-warning-color: hsl(36, 39%, 28%);
-    --color-warning-light-color: hsl(37, 49%, 54%);
-    --color-failed-color: hsl(8, 68%, 45%);
-}
 
 
 @layer components {
     /* navbar */
     .navbar {
-        @apply bg-layout-color lg:col-start-2 col-start-1 row-start-1 border-1 border-line-color border-r-0  border-t-0 border-l-0 flex justify-between gap-4 items-center p-3;
+        @apply bg-[var(--layout-color)]  lg:col-start-2 col-start-1 row-start-1 border-1 border-line-color border-r-0  border-t-0 border-l-0 flex justify-between gap-4 items-center p-3;
     }
     .navbar-right {
-        @apply w-fit h-full flex gap-3
+        @apply w-fit h-full flex gap-1
          items-center;
     }
     .navbar-left {
-        @apply w-fit h-full flex items-center justify-end;
+        @apply w-fit h-full  flex items-center justify-end;
     }
     .bx-menu {
-        @apply text-text-color text-4xl cursor-pointer;
+        @apply text-[var(--text-color)] text-4xl cursor-pointer;
     }
 
     .bxr {
-        @apply text-text-color text-2xl;
+        @apply text-[var(--text-color)] text-2xl;
     }
     .navbar-left {
-        @apply flex gap-3;
+        @apply flex gap-3 items-center justify-between h-full
     }
     .navbar-left-right {
-        @apply gap-2 border-2 w-sm overflow-hidden border-line-color px-2 flex items-center justify-between h-full duration-300 bg-box-color rounded-lg  focus-within:border-ok-color;
+        @apply gap-2 border-2 w-sm overflow-hidden border-line-color px-2 flex items-center justify-between h-full duration-300 bg-[var(--box-color)] rounded-lg  focus-within:border-ok-color;
     }
     .navbar-search-input {
-        @apply text-text-color text-center outline-0 w-full text-sm sm:text-lg h-full;
+        @apply text-[var(--text-color)] text-center outline-0 w-full text-sm sm:text-lg h-full;
     }
     .navbar-search-label {
         @apply flex items-center;
@@ -65,8 +47,12 @@
         @apply flex;
     }
 }
-
+.navbar{
+    *{
+        user-select: none;
+    }
+}
 .navbar-left-right:focus-within label i {
-    color: white;
+    color: var(--color-ok-color);
     transition: 300ms;
 }

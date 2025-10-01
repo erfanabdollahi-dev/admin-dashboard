@@ -1,28 +1,9 @@
 @import "tailwindcss";
-
-@theme {
-    /* fonts */
-    --font-sans: "Shabnam", sans-serif;
-
-    /* colors */
-    --color-bg-color:  hsl(0, 0%, 4%);
-    --color-layout-color: hsl(0, 0%, 4%);
-    --color-box-color: hsl(0, 0%, 9%);
-    --color-box-highlights-color: hsl(0, 0%, 13%);
-    --color-line-color: hsl(180, 1%, 17%);
-    --color-text-color: hsl(0, 0%, 98%);
-    --color-secondary-text-color: hsl(0, 0%, 63%);
-
-    --color-success-color: hsl(163, 62%, 47%);
-    --color-ok-color: hsl(212, 86%, 55%);
-    --color-warning-color: hsl(36, 39%, 28%);
-    --color-warning-light-color: hsl(37, 49%, 54%);
-    --color-failed-color: hsl(8, 68%, 45%);
-}
+@import '../../../index.css';
 
 @layer components {
     .sidebar {
-        @apply duration-300 right-0  overflow-scroll z-50  absolute select-none h-screen box-border min-w-0 border-1 border-l-line-color   top-0 lg:sticky bg-layout-color  p-3 pl-[17px] row-start-1 row-end-3 w-[300px];
+        @apply duration-300 right-0  overflow-scroll z-50  absolute select-none h-screen box-border min-w-0  border-l-2  border-l-line-color   top-0 lg:sticky bg-[var(--layout-color)]  p-3 pl-[17px] row-start-1 row-end-3 w-[300px];
     }
 
     .sidebar-inner {
@@ -36,7 +17,7 @@
     }
     /* profile */
     .item-info {
-        @apply gap-3 flex border-2 border-line-color w-full  bg-bg-color items-center  justify-between  rounded-lg p-2;
+        @apply gap-3 flex border-2 border-line-color w-full  bg-[var(--bg-color)] items-center  justify-between  rounded-lg p-2;
     }
     .sidebar-profile {
         @apply min-w-[50px]  max-w-[50px] overflow-hidden rounded-sm h-[50px];
@@ -55,31 +36,31 @@
     }
 
     .sidebar-item-child {
-        @apply flex items-center cursor-pointer w-full duration-300 p-2  gap-4 border-2 border-layout-color rounded-lg;
+        @apply flex items-center cursor-pointer w-full duration-300 p-2  gap-4 border-2 border-[var(--layout-color)] rounded-lg;
     }
     .sidebar-item-child:hover {
-        @apply border-line-color bg-box-color;
+        @apply border-line-color bg-[var(--box-color)];
     }
     .sidebar-item-icon {
-        @apply text-2xl flex text-center items-center justify-center duration-300 text-secondary-text-color group-hover:text-text-color;
+        @apply text-2xl flex text-center items-center justify-center duration-300 text-secondary-text-color group-hover:text-[var(--text-color)];
     }
     .sidebar-item-title {
-        @apply duration-300 group-hover:text-text-color text-secondary-text-color;
+        @apply duration-300 group-hover:text-[var(--text-color)] text-secondary-text-color;
     }
     .sidebar-sub-parent {
-        @apply flex items-center w-full  duration-300    border-2 border-layout-color rounded-lg flex-col;
+        @apply flex items-center w-full  duration-300    border-2 border-[var(--layout-color)] rounded-lg flex-col;
     }
     .sidebar-submenu {
         @apply flex flex-col overflow-hidden max-h-0  duration-300 ease-in-out transition-all w-[90%]  border-r-2 pr-1 border-line-color gap-1;
     }
     .sidebar-submenu-item-child {
-        @apply flex items-center w-full duration-300 p-2  gap-4 border-2 border-layout-color rounded-lg  justify-between;
+        @apply flex items-center w-full duration-300 p-2  gap-4 border-2 border-[var(--layout-color)] rounded-lg  justify-between;
     }
     .submenu-show {
         @apply max-h-[400px] mt-2; /* large enough to contain all submenu items */
     }
     .sidebar-submenu-arrow {
-        @apply text-lg duration-300 group-hover:text-text-color text-secondary-text-color;
+        @apply text-lg duration-300 group-hover:text-[var(--text-color)] text-secondary-text-color;
     }
     .arrow-rotate {
         @apply rotate-180 text-ok-color;
@@ -99,12 +80,12 @@
 
 .sidebar-item-active {
     border-color: var(--color-line-color);
-    background-color: var(--color-box-color);
+    background-color: var(--box-color);
     i {
         color: var(--color-ok-color);
     }
     h2 {
-        color: white;
+        color: var(--text-color);
     }
 }
 
@@ -121,8 +102,8 @@
     }
 }
 .sidebar-submenu-active:hover {
-    border-color: var(--color-layout-color);
-    background-color: var(--color-layout-color);
+    border-color: var(--layout-color);
+    background-color: var(--layout-color);
     i {
         color: var(--color-ok-color);
     }

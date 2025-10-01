@@ -1,50 +1,21 @@
 @import "tailwindcss";
+@import '../../index.css';
+
 
 @layer base {
     span {
         @apply font-ShabnamFD text-gray-50;
     }
-    :root {
 
-
-        /* my colors */
-        --bg-color: hsl(0, 0%, 48%);
-    }
-
-    .dark {
-
-
-        /* mycolros */
-        --bg-color: hsl(210, 15%, 5%);
-    }
 }
-@theme {
-    /* fonts */
-    --font-sans: "Shabnam", sans-serif;
-    --font-ShabnamFD: "ShabnamFD", sans-serif;
-    --font-mono: "ShabnamFD", sans-serif;
 
-    /* colors */
-    --color-bg-color: [var(--bg-color)];
-    --color-layout-color: hsl(0, 0%, 4%);
-    --color-box-color: hsl(0, 0%, 9%);
-    --color-box-highlights-color: hsl(0, 0%, 13%);
-    --color-line-color: hsl(180, 1%, 17%);
-    --color-text-color: hsl(0, 0%, 98%);
-    --color-secondary-text-color: hsl(0, 0%, 63%);
 
-    --color-success-color: hsl(163, 62%, 47%);
-    --color-ok-color: hsl(212, 86%, 55%);
-    --color-warning-color: hsl(36, 39%, 28%);
-    --color-warning-light-color: hsl(37, 49%, 54%);
-    --color-failed-color: hsl(8, 68%, 45%);
-}
 @layer components {
-    .content {
-        @apply dark:bg-layout-color  grid grid-cols-[repeat(2,1fr)] grid-rows-[1fr_1fr_1fr_1fr] lg:grid-rows-[.5fr_1fr] lg:grid-cols-[repeat(4,1fr)] max-h-[calc(100vh-65px)] overflow-y-scroll  overflow-x-scroll box-border p-5 gap-4;
+    .dashboard {
+        @apply bg-[var(--layout-color)] duration-300  grid grid-cols-[repeat(2,1fr)] grid-rows-[1fr_1fr_1fr_1fr] lg:grid-rows-[.5fr_1fr] lg:grid-cols-[repeat(4,1fr)] lg:pb-20 max-h-[calc(100vh-65px)] overflow-y-scroll  overflow-x-scroll box-border p-5 gap-4;
     }
     .dashbaord-top-items {
-        @apply w-[100%] min-h-[180px] h-full  sm:min-h-[200px]  overflow-hidden relative sm:h-full rounded-lg sm:p-4 p-3 box-border border-1 border-line-color  duration-300     gap-1  bg-box-color sm:min-w-65  flex flex-col  items-start justify-between;
+        @apply w-[100%] min-h-[180px]  h-full bg-[var(--box-color)]  sm:min-h-[200px]   overflow-hidden relative sm:h-full rounded-lg sm:p-4 p-3 box-border border-1 border-line-color  duration-300     gap-1  sm:min-w-65  flex flex-col  items-start justify-between;
         * {
             z-index: 10;
         }
@@ -53,7 +24,7 @@
     .top-item-top {
         @apply w-full   flex items-start justify-between;
         i {
-            @apply text-2xl text-text-color;
+            @apply text-2xl text-[var(--text-color)];
         }
         .dashboard-item-info {
             @apply flex flex-col gap-2;
@@ -61,7 +32,7 @@
                 @apply text-sm 2xl:text-lg text-secondary-text-color;
             }
             .dashboard-total {
-                @apply flex sm:flex-row flex-col justify-center text-center items-start sm:gap-2 text-text-color;
+                @apply flex sm:flex-row flex-col justify-center text-center items-start sm:gap-2 text-[var(--text-color)];
                 small {
                     @apply text-sm;
                 }
@@ -74,7 +45,7 @@
             @apply text-warning-light-color;
         }
         #cart-today {
-            @apply text-text-color;
+            @apply text-[var(--text-color)];
         }
     }
     .top-item-bottom {
@@ -87,12 +58,18 @@
         }
     }
     .dashboard-chart {
-        @apply col-start-1 col-end-3 lg:col-start-3  lg:col-end-5;
+        @apply col-start-1 col-end-3 lg:col-start-3  lg:col-end-5  ;
     }
     .dashboard-table {
-        @apply min-h-[270px]  overflow-scroll lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:row-end-3 row-start-4 row-end-5 col-start-1 col-end-3  bg-box-color rounded-lg p-2 box-border border-1 border-line-color;
+        @apply min-h-[270px] gap-4 flex flex-col overflow-scroll lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:row-end-3 row-start-4 row-end-5 col-start-1 col-end-3  bg-[var(--box-color)] rounded-lg p-5 box-border border-1 border-line-color;
     }
+
+    
 }
+
+
+
+
 
 .dashbaord-top-items::before {
     content: "";
@@ -106,7 +83,7 @@
     transform: translate(-50%, -50%);
     transition: 300ms ease, left 0s, top 0s;
     background: radial-gradient(
-        var(--color-text-color),
+        var(--text-color),
         transparent,
         transparent
     );
@@ -118,7 +95,7 @@
     inset: 2px;
     position: absolute;
     border-radius: 6px;
-    background: var(--color-box-color);
+    background: var(--box-color);
 }
 
 .dashbaord-top-items:hover::before {
@@ -145,24 +122,24 @@
 }
 
 /* width of scrollbar */
-.content::-webkit-scrollbar {
+.dashboard::-webkit-scrollbar {
     width: 8px;
     height: 8px;
     background: transparent;
 }
 
 /* track */
-.content::-webkit-scrollbar-track {
+.dashboard::-webkit-scrollbar-track {
     background: transparent;
 
     /* or use a Tailwind color like theme('colors.gray.200') */
 }
-.content::-webkit-scrollbar-corner {
+.dashboard::-webkit-scrollbar-corner {
     background-color: transparent;
 }
 
 /* handle */
-.content::-webkit-scrollbar-thumb {
+.dashboard::-webkit-scrollbar-thumb {
     background-color: var(--color-line-color); /* your custom color */
     border-radius: 9999px;
     box-sizing: border-box;
@@ -170,6 +147,6 @@
 }
 
 /* handle on hover */
-.content::-webkit-scrollbar-thumb:hover {
+.dashboard::-webkit-scrollbar-thumb:hover {
     background-color: #555;
 }

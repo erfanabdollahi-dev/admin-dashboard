@@ -16,11 +16,13 @@ const Index = () => {
     const { OpenSidebar, sidebarOpen } = useContext(SidebarContext);
     const sidebarRef = useRef(null);
     const handleClickOutside = (event) => {
+        
         if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
             OpenSidebar(false);
         }
     };
     useEffect(() => {
+        
         const isLargeScreen = window.innerWidth <= 1024
         if (sidebarOpen && isLargeScreen) {
             document.addEventListener("mousedown", handleClickOutside);
