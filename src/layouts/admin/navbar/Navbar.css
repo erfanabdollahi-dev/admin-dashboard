@@ -6,7 +6,7 @@
 @layer components {
     /* navbar */
     .navbar {
-        @apply bg-[var(--layout-color)]  lg:col-start-2 col-start-1 row-start-1 border-1 border-line-color border-r-0  border-t-0 border-l-0 flex justify-between gap-4 items-center p-3;
+        @apply bg-[var(--layout-color)] sticky top-0  lg:col-start-2 col-start-1 row-start-1 border-1 border-line-color border-r-0  border-t-0 border-l-0 flex justify-between gap-4 items-center p-3;
     }
     .navbar-right {
         @apply w-fit h-full flex gap-1

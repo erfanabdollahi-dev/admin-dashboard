@@ -143,7 +143,7 @@
     }
 
     .default-table-inner {
-        @apply w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 rounded-lg;
+        @apply w-full text-sm text-left rtl:text-right  text-gray-500 dark:text-gray-400 rounded-lg overflow-hidden;
     }
 
     .default-table-head {
@@ -193,6 +193,27 @@
     box-sizing: border-box;
     z-index: 0;
 }
+.default-table-container::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
 .default-table::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+.default-table-container::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.default-table-container::-webkit-scrollbar-track {
+    background: transparent;
+
+    /* or use a Tailwind color like theme('colors.gray.200') */
+}
+.default-table-container::-webkit-scrollbar-thumb {
+    background-color: var(--color-line-color); /* your custom color */
+    border-radius: 9999px;
+    box-sizing: border-box;
+    z-index: 0;
+}
+.default-table-container::-webkit-scrollbar-corner {
     background-color: transparent;
 }
