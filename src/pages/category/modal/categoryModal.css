@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@import "../../../index.css";
+
+@layer components {
+    .modal-category {
+        @apply z-[9999] opacity-0  duration-400  grid grid-rows-[60px_auto] p-3 absolute bg-[var(--layout-color)] left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[0] h-full overflow-hidden;
+    }
+    .modal-open{
+        @apply w-full h-full rounded-none opacity-100
+    }
+    .modal-category{
+    input{
+        @apply text-[var(--text-color)]
+    }
+}
+    .modal-category-top {
+        @apply w-full border-b-2 px-10 border-line-color max-h-[calc(100vh-60px)] flex  items-center justify-between;
+    }
+    .category-item {
+        @apply cursor-pointer text-3xl text-secondary-text-color active:text-ok-color duration-300 hover:text-[var(--text-color)];
+    }
+    .modal-category-body {
+        @apply w-full h-full flex items-center justify-center;
+    }
+    .modal-category-body-inner {
+        @apply w-[100%] sm:w-[80%] h-fit gap-6 sm:gap-9 lg:w-[70%] 2xl:w-[50%]  flex flex-col items-center py-3;
+    }
+    .modal-category-item {
+        @apply h-[40px] lg:h-[50px] rounded-sm  flex items-center w-[80%] bg-[var(--box-color)] border-2 dark:border-line-color box-border border-stone-700;
+    }
+    .modal-category-buttons {
+        @apply   h-[40px] rounded-sm  flex items-center w-[80%] justify-end  gap-4;
+        button{
+            @apply text-[var(--text-color)] cursor-pointer sm:bg-line-color    w-[85px] duration-300 px-4 py-2 rounded-lg
+        }
+    }
+    .modal-category-item-textarea {
+        @apply h-[70px] rounded-sm overflow-hidden flex items-center w-[80%] bg-[var(--box-color)] border-2 border-line-color box-border;
+    }
+    .modal-category-lable {
+        @apply px-1 box-border text-sm min-w-[80px] text-center border-line-color border-l-1 h-full items-center flex justify-center;
+    }
+    .modal-category-input {
+        @apply w-full h-full outline text-center p-1;
+    }
+    .modal-category-input-file {
+        @apply flex items-center opacity-0  pr-[82px] absolute outline left-0 w-full h-full  max-w-full text-center p-1
+    }
+    .modal-category-textarea {
+        @apply select-text decoration-0 w-full  h-full outline-0 text-center  dark:border-line-color box-border border-stone-700 p-1;
+    }
+    .status-con {
+        @apply w-full h-full flex gap-4 px-4 p-1  ;
+    }
+    .status {
+        @apply flex text-secondary-text-color gap-1  cursor-pointer justify-center items-center box-border rounded-sm border-1 duration-300 border-[var(--box-color)] w-[50%] h-full;
+    }
+    .status-title{
+        @apply text-[10px] sm:text-lg
+    }
+}
+
+.category-active {
+    border-color: var(--color-success-color);
+    > h2{
+        color: var(--text-color);
+    }
+    > i {
+        color: var(--color-success-color);
+    }
+}
+.category-not-active {
+    border-color: var(--color-failed-color);
+    > h2{
+        color: var(--text-color);
+    }
+    > i {
+        color: var(--color-failed-color);
+    }
+}
+.modal-category {
+    * {
+        user-select: none;
+    }
+}

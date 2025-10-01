@@ -3,13 +3,13 @@
 
 @layer components {
     .category {
-        @apply p-3 grid grid-cols-1 grid-rows-[1fr_auto_60px]  min-h-[calc(100vh-65px)];
+        @apply p-3 grid grid-cols-1 grid-rows-[170px_auto_60px]  min-h-[calc(100vh-65px)];
     }
     .category-header {
         @apply w-full h-full flex flex-col items-center;
     }
     .catetory-title {
-        @apply text-[var(--text-color)] text-2xl py-7;
+        @apply text-[var(--text-color)] text-lg sm:text-2xl sm:py-7 py-5;
     }
     .category-header-bottom {
         @apply flex items-center box-border sm:justify-between gap-5  justify-center sm:gap-10   overflow-hidden w-full h-[45px];

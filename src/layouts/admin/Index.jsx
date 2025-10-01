@@ -7,6 +7,7 @@ import {
 } from "./contexts/SidebarContext";
 import Dashboard from "../../pages/dashboard/Dashboard";
 import Category from "@/pages/category/Category";
+import CategoryModalContainer from "@/pages/contexts/CategoryModal";
 const Index = () => {
     return (
         <SidebarContextContainer>
@@ -14,7 +15,10 @@ const Index = () => {
             <Sidebar />
 
             {/* <Dashboard /> */}
+            <CategoryModalContainer>
+
             <Category/>
+            </CategoryModalContainer>
         </SidebarContextContainer>
     );
 };

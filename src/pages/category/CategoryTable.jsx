@@ -1,18 +1,16 @@
 import React from "react";
+const counter = 10;
 
-const Table = () => {
+const CategoryTable = () => {
     return (
         <div className="default-table">
-            <h1 className="default-title">محصولات رو به اتمام</h1>
+            <h1 className="default-title"></h1>
             <div className="default-table-container">
                 <table className="default-table-inner">
                     <thead className="default-table-head">
                         <tr className="default-table-row">
                             <th scope="col" className="default-th">
                                 #
-                            </th>
-                            <th scope="col" className="default-th">
-                                دسته
                             </th>
                             <th scope="col" className="default-th">
                                 عنوان
@@ -26,19 +24,22 @@ const Table = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr className="default-tr">
-                            <th scope="row" className="default-td-index">
-                                1
-                            </th>
-                            <td className="default-td">دسته شماره فلان</td>
-                            <td className="default-td">محصول فلان</td>
-                            <td className="default-td">پایان یافت</td>
-                            <td className="default-td-action">
-                                <a href="#" className="default-action-link">
-                                    حذف
-                                </a>
-                            </td>
-                        </tr>
+                        {[...Array(counter)].map((_, index) => (
+                            <tr key={index} className="default-tr">
+                                <th scope="row" className="default-td-index">
+                                    {index + 1}
+                                </th>
+                                <td className="default-td">
+                                    دسته شماره {index + 1}
+                                </td>
+                                <td className="default-td">پایان یافت</td>
+                                <td className="default-td-action">
+                                    <a href="#" className="default-action-link">
+                                        حذف
+                                    </a>
+                                </td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>
@@ -46,4 +47,4 @@ const Table = () => {
     );
 };
 
-export default Table;
+export default CategoryTable;

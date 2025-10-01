@@ -1,12 +1,8 @@
-export const connections = {
-    title: "ارتباطات",
-    name: "connections",
-    icon: "bx bxs-share-alt",
-    children: [
-        { title: "سوال ها", icon: "bx-alert-circle" },
-        { title: "نظرات", icon: "bx bx-message-alt-detail" },
-    ],
+export const dashboard = {
+    title: "داشبورد",
+    icon: "bx bxs-dashboard",
 };
+
 export const shop = {
     title: "فروشگاه",
     name: "shop",
@@ -40,7 +36,12 @@ export const community = {
         { title: "مجوز ها", icon: "bxr bx-shield" },
     ],
 };
-export const dashboard = {
-    title: "داشبورد",
-    icon: "bx bxs-dashboard",
+export const connections = {
+    title: "ارتباطات",
+    name: "connections",
+    icon: "bx bxs-share-alt",
+    children: [
+        { title: "سوال ها", icon: "bx-help-circle" },
+        { title: "نظرات", icon: "bx bx-message-alt-detail" },
+    ],
 };
