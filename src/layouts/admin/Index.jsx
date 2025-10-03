@@ -14,11 +14,11 @@ const Index = () => {
             <Navbar />
             <Sidebar />
 
-            {/* <Dashboard /> */}
-            <CategoryModalContainer>
+            <Dashboard />
+            {/* <CategoryModalContainer>
 
             <Category/>
-            </CategoryModalContainer>
+            </CategoryModalContainer> */}
         </SidebarContextContainer>
     );
 };

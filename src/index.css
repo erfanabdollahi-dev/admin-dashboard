@@ -177,6 +177,9 @@
     .default-action-link {
         @apply font-medium text-failed-color hover:underline;
     }
+    .pagination-item{
+        @apply flex duration-300 items-center justify-center px-4 h-10 ms-0 leading-tight text-secondary-text-color bg-[var(--box-color)] border border-e-0 border-line-color rounded-s-lg hover:bg-gray-100 hover:text-[var(--text-color)]    dark:hover:bg-[var(--box2-color)];
+    }
 }
 .default-table::-webkit-scrollbar {
     width: 5px;
